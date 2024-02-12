@@ -5,7 +5,7 @@ return {
     config = function()
       local config = require("toggleterm")
       config.setup({
-        open_mapping = [[<leader>t]],
+        open_mapping = [[<C-t>]],
         shade_filetypes = {},
         direction = 'float',
         float_opts = {

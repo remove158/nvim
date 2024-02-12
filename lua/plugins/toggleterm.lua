@@ -1,6 +1,10 @@
 return {
-  -- amongst your other plugins
-  {'akinsho/toggleterm.nvim', version = "*", config = true},
-  -- or
-  {'akinsho/toggleterm.nvim', version = "*", opts = {}}
+  {
+    'akinsho/toggleterm.nvim', 
+    version = "*", 
+    config = function()
+      require("toggleterm").setup()
+      vim.keymap.set("n","<C-t>", ":ToggleTerm direction=float<cr>")
+    end
+  }
 }

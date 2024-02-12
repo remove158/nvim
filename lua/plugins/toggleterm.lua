@@ -4,10 +4,15 @@ return {
     version = "*", 
     config = function()
       local config = require("toggleterm")
-      config.setup({})
+      config.setup({
+        open_mapping = [[<c-t>]],
+        shade_filetypes = {},
+        direction = 'float',
+        float_opts = {
+          border = 'curved'
+        }
+      })
 
-      -- set kiy binding for ToggleTerm
-      vim.keymap.set("n","<C-t>", ":ToggleTerm direction=float<cr>")
     end
   }
 }

@@ -26,7 +26,21 @@ return {
                     require("lspconfig")[server_name].setup({
                         capabilities = capabilities
                     })
-                end
+                end,
+                -- to ignore vim diagnostics error
+                ["lua_ls"] = function()
+                    require("lspconfig").lua_ls.setup({
+                        settings = {
+                            Lua = {
+                                diagnostics = {
+                                    globals = { "vim" }
+                                }
+                            }
+
+                        }
+
+                    })
+                end,
             }
         })
     end

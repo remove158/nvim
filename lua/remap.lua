@@ -14,7 +14,7 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 -- moveline
 vim.keymap.set("v", "J", ":m '>+1<cr>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv") 
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 
 -- page scroll middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

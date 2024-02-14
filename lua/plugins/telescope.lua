@@ -1,4 +1,4 @@
-return {
+rturn {
   {
     "nvim-telescope/telescope-ui-select.nvim",
   },

@@ -4,8 +4,10 @@ return {
         "williamboman/mason-lspconfig.nvim",
         "williamboman/mason.nvim",
         "ray-x/lsp_signature.nvim",
+        "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
         require('mason').setup()
         require('lsp_signature').setup()
         require('mason-lspconfig').setup({
@@ -19,13 +21,13 @@ return {
                 "gopls",
                 "golangci_lint_ls",
             },
-            handlers =  {
+            handlers = {
                 function(server_name)
-                    require("lspconfig")[server_name].setup {}
+                    require("lspconfig")[server_name].setup({
+                        capabilities = capabilities
+                    })
                 end
             }
         })
-
     end
 }
-

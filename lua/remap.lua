@@ -28,3 +28,7 @@ vim.keymap.set("x", "<leader>p", [["_dp]])
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+
+-- <C-c> and <C-s>
+vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("n", "<C-s>", ":w<CR>")

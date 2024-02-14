@@ -23,12 +23,19 @@ return {
                     documentation = cmp.config.window.bordered(),
                 },
                 mapping = cmp.mapping.preset.insert({
+                    -- prev
                     ['<S-Tab>'] = cmp.mapping.select_prev_item(),
                     ['<C-k>'] = cmp.mapping.select_prev_item(),
+                    -- next
                     ['<C-j>'] = cmp.mapping.select_next_item(),
                     ['<Tab>'] = cmp.mapping.select_next_item(),
+                    -- abort
                     ['<C-e>'] = cmp.mapping.abort(),
+                    ['<Esc>'] = cmp.mapping.abort(),
+
+                    -- comfirm
                     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                    ['<C-Space>'] = cmp.mapping.confirm({ select = true }),
                 }),
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },

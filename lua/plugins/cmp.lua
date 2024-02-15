@@ -73,7 +73,6 @@ return {
                     ['<C-j>'] = cmp.mapping.select_next_item(),
                     ['<Tab>'] = cmp.mapping.select_next_item(),
                     -- abort
-                    ['<C-e>'] = cmp.mapping.abort(),
                     ['<Esc>'] = cmp.mapping.abort(),
 
                     -- comfirm

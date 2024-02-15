@@ -32,7 +32,3 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- <C-c> and <C-s>
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-s>", ":w<CR>")
-
--- Quickfix
---vim.keymap.set("n", "<C-j>" , "<cmd>cnext<CR>zz")
---vim.keymap.set("n", "<C-k>" , "<cmd>cprev<CR>zz")

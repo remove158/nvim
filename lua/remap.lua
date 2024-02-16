@@ -22,6 +22,7 @@ vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 -- page scroll middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-b>", "<C-u>zz")
 
 -- best remap
 vim.keymap.set("x", "<leader>p", [["_dp]])

@@ -7,6 +7,9 @@ vim.keymap.set("n", "<C-j>", ":wincmd j<CR>")
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>")
 vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 
+-- navigate cmd
+vim.keymap.set("c", "<C-j>", "<right>")
+vim.keymap.set("c", "<C-k>", "<left>")
 
 -- Ex
 vim.keymap.set("n", "<leader>e", ":Ex<CR>")

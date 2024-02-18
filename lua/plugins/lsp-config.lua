@@ -24,9 +24,6 @@ return {
 				-- golang
 				"gopls",
 				"golangci_lint_ls",
-
-				-- prettier
-				"prettier",
 			},
 			handlers = {
 				function(server_name)
@@ -69,7 +66,7 @@ return {
 		)
 
 		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = vim.api.nvim_create_augroup('LspFormatting',{}),
+			group = vim.api.nvim_create_augroup('LspFormatting', {}),
 			callback = function()
 				vim.lsp.buf.format { asnyc = true }
 			end,

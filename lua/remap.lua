@@ -12,7 +12,7 @@ vim.keymap.set("c", "<C-j>", "<right>")
 vim.keymap.set("c", "<C-k>", "<left>")
 
 -- Ex
-vim.keymap.set("n", "<leader>e", ":Ex<CR>")
+vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 -- moveline

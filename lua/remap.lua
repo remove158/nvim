@@ -12,7 +12,7 @@ vim.keymap.set("c", "<C-j>", "<right>")
 vim.keymap.set("c", "<C-k>", "<left>")
 
 -- Ex
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>")
+vim.keymap.set("n", "<leader>e", ":Ex<CR>")
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 
 -- moveline
@@ -25,7 +25,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-b>", "<C-u>zz")
 
 -- best remap
-vim.keymap.set("x", "<leader>p", [["_dp]])
+vim.keymap.set("x", "p", [["_dp]])
 
 
 -- search term middel

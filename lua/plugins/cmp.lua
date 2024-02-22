@@ -75,7 +75,6 @@ return {
 					['<Tab>'] = cmp.mapping.select_next_item(),
 					-- abort
 					['<Esc>'] = cmp.mapping.abort(),
-
 					-- comfirm
 					['<CR>'] = cmp.mapping.confirm({ select = true }),
 					['<C-Space>'] = cmp.mapping.confirm({ select = true }),

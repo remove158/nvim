@@ -22,10 +22,11 @@ vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 -- page scroll middle
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-b>", "<C-u>zz")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
 
 -- best remap
-vim.keymap.set("x", "p", [["_dp]])
+vim.keymap.set("x", "<leader>p", [["_dp]])
 
 
 -- search term middel
@@ -36,6 +37,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "ZQ", ":qa!<CR>")
 vim.keymap.set("n", "ZZ", ":wq!<CR>")
 
--- <C-c> and <C-s>
+-- Ctrls
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-s>", ":w<CR>")
+vim.keymap.set("n", "<C-r>", ":e<CR>")

@@ -10,11 +10,11 @@ return {
 		"j-hui/fidget.nvim",
 	},
 	config = function()
-		local capabilities = require('cmp_nvim_lsp').default_capabilities()
-		require('mason').setup()
-		require('fidget').setup()
-		require('lsp_signature').setup()
-		require('mason-lspconfig').setup({
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		require("mason").setup()
+		require("fidget").setup()
+		require("lsp_signature").setup()
+		require("mason-lspconfig").setup({
 			ensure_installed = {
 				-- lua
 				"lua_ls",
@@ -28,7 +28,7 @@ return {
 			handlers = {
 				function(server_name)
 					require("lspconfig")[server_name].setup({
-						capabilities = capabilities
+						capabilities = capabilities,
 					})
 				end,
 				-- -- to ignore vim diagnostics error
@@ -37,18 +37,16 @@ return {
 						settings = {
 							Lua = {
 								diagnostics = {
-									globals = { "vim" }
-								}
-							}
-
-						}
-
+									globals = { "vim" },
+								},
+							},
+						},
 					})
 				end,
-			}
+			},
 		})
-		vim.api.nvim_create_autocmd('LspAttach', {
-			group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
 				local opts = { buffer = ev.buf }
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -57,19 +55,7 @@ return {
 				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
 				vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opts)
-
-				vim.keymap.set('n', '<leader>f', function()
-					vim.lsp.buf.format { async = true }
-				end, opts)
-			end
-		}
-		)
-
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = vim.api.nvim_create_augroup('LspFormatting', {}),
-			callback = function()
-				vim.lsp.buf.format { asnyc = true }
 			end,
 		})
-	end
+	end,
 }

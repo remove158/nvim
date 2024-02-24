@@ -26,7 +26,7 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
 -- best remap
-vim.keymap.set("x", "<leader>p", [["_dp]])
+-- vim.keymap.set("x", "<leader>p", [["_dp]])
 
 
 -- search term middel

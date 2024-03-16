@@ -26,12 +26,12 @@ vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
 --jump
-vim.keymap.set("n", "\"", "/\"\\|\'\\|`<Cr>:nohlsearch<CR>zz")
-vim.keymap.set("n", "\'", "/\"\\|\'\\|`<Cr>NN:nohlsearch<CR>zz")
-vim.keymap.set("n", "}", "/}\\|{<Cr>:nohlsearch<CR>zz")
-vim.keymap.set("n", "{", "/}\\|{<Cr>NN:nohlsearch<CR>zz")
-vim.keymap.set("n", ")", "/)\\|(<Cr>:nohlsearch<CR>zz")
-vim.keymap.set("n", "(", "/)\\|(<Cr>NN:nohlsearch<CR>zz")
+vim.keymap.set("n", "\"", "/\"\\|\'\\|`<Cr>n:nohlsearch<CR>zz")
+vim.keymap.set("n", "\'", "/\"\\|\'\\|`<Cr>NNN:nohlsearch<CR>zz")
+vim.keymap.set("n", "}", "/}\\|{<Cr>n:nohlsearch<CR>zz")
+vim.keymap.set("n", "{", "/}\\|{<Cr>NNN:nohlsearch<CR>zz")
+vim.keymap.set("n", ")", "/)\\|(<Cr>n:nohlsearch<CR>zz")
+vim.keymap.set("n", "(", "/)\\|(<Cr>NNN:nohlsearch<CR>zz")
 
 -- search term midde
 vim.keymap.set("n", "n", "nzzzv")

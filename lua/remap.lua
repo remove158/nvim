@@ -25,11 +25,15 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "{", "{zz")
 vim.keymap.set("n", "}", "}zz")
 
--- best remap
--- vim.keymap.set("x", "<leader>p", [["_dp]])
+--jump
+vim.keymap.set("n", "\"", "/\"\\|\'\\|`<Cr>:nohlsearch<CR>zz")
+vim.keymap.set("n", "\'", "/\"\\|\'\\|`<Cr>NN:nohlsearch<CR>zz")
+vim.keymap.set("n", "}", "/}\\|{<Cr>:nohlsearch<CR>zz")
+vim.keymap.set("n", "{", "/}\\|{<Cr>NN:nohlsearch<CR>zz")
+vim.keymap.set("n", ")", "/)\\|(<Cr>:nohlsearch<CR>zz")
+vim.keymap.set("n", "(", "/)\\|(<Cr>NN:nohlsearch<CR>zz")
 
-
--- search term middel
+-- search term midde
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
@@ -41,3 +45,18 @@ vim.keymap.set("n", "ZZ", ":wq!<CR>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("n", "<leader>r", ":e<CR>")
+
+-- Math
+vim.keymap.set("n", "+", "<C-a>")
+vim.keymap.set("n", "_", "<C-x>")
+
+
+-- Visual
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+
+
+-- Tab
+vim.keymap.set("n", "te", ":tabedit<Cr>")
+vim.keymap.set("n", "tq", ":tabclose<Cr>")
+vim.keymap.set("n", "<S-l>", ":tabnext<Cr>")
+vim.keymap.set("n", "<S-h>", ":tabprevious<Cr>")

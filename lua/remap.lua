@@ -44,7 +44,7 @@ vim.keymap.set("n", "ZZ", ":wq!<CR>")
 -- Ctrls
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-s>", ":w<CR>")
-vim.keymap.set("n", "<leader>r", ":e<CR>")
+vim.keymap.set("n", "<leader>r", ":e!<CR>")
 
 -- Math
 vim.keymap.set("n", "+", "<C-a>")

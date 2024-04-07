@@ -6,5 +6,3 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 -- Page scroll
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-
-vim.keymap.set("n", "<C-g>", ":LazyGit<CR>")

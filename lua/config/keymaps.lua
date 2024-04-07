@@ -6,3 +6,6 @@ vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 -- Page scroll
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-g>", function()
+  LazyVim.lazygit({ cwd = LazyVim.root.git() })
+end, { desc = "Lazygit (Root Dir)" })

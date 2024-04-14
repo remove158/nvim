@@ -2,11 +2,6 @@ return {
 	"kdheepak/lazygit.nvim",
 	cmd = {
 		"LazyGit",
-		"LazyGitConfig",
-		"LazyGitCurrentFile",
-		"LazyGitFilter",
-		"LazyGitFloat",
-		"LazyGitFilterCurrentFile",
 	},
 	-- optional for floating window border decoration
 	dependencies = {
@@ -20,6 +15,5 @@ return {
 	},
 	config = function()
 		require("telescope").load_extension("lazygit")
-		vim.g.lazygit_floating_window_winblend = 1
 	end,
 }

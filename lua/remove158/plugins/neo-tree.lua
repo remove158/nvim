@@ -7,8 +7,14 @@ return {
 		"MunifTanjim/nui.nvim",
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
-	config = function()
-		require("neo-tree")
-		vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>")
-	end,
+	keys = {
+		{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "Toggle Neo-tree" },
+	},
+	config = {
+		window = {
+			mappings = {
+				["?"] = { "show_help", config = { prefix_key = "q" } },
+			},
+		},
+	},
 }

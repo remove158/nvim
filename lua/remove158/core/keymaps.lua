@@ -28,6 +28,5 @@ keymap.set("n", "<C-c>", "<C-c><cmd>nohl<CR>")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 
-keymap.set("n", "<leader>q", "<cmd>q!<CR>")
 keymap.set("n", "<C-q>", "<cmd>qa!<CR>")
 keymap.set("n", "ZQ", "<cmd>qa!<CR>")

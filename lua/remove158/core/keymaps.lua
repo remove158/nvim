@@ -4,7 +4,7 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
-keymap.set("n", "<leader>h", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>h", "", { desc = "Clear search highlights" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
@@ -24,6 +24,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 keymap.set("n", "<C-s>", "<cmd>wa!<CR>", { desc = "Save all buffer" })
 
+keymap.set("n", "<C-c>", "<C-c><cmd>nohl<CR>")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
 

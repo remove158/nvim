@@ -2,6 +2,7 @@ return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufReadPre", "BufNewFile" },
 	opts = {
+		current_line_blame = true,
 		on_attach = function(bufnr)
 			local gs = package.loaded.gitsigns
 
@@ -45,9 +46,4 @@ return {
 			map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "Gitsigns select hunk")
 		end,
 	},
-	config = function()
-		require("gitsigns").setup({
-			current_line_blame = true,
-		})
-	end,
 }

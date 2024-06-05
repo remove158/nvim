@@ -10,9 +10,17 @@ return {
 	keys = {
 		{ "<leader>e", "<cmd>Neotree reveal<CR>", desc = "Open Neo-tree files" },
 	},
+	opts = {
+		event_handlers = {
+			event = "neo_tree_buffer_enter",
+			handler = function()
+				vim.opt_local.relativenumber = true
+			end,
+		},
+	},
 	config = {
 		source_selector = {
-			winbar = true,
+			winbar = false,
 		},
 		filesystem = {
 			filtered_items = {

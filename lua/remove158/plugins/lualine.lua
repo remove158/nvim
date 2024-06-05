@@ -11,11 +11,9 @@ return {
 			sections = {
 				lualine_b = { "branch" },
 				lualine_c = { { "filename", path = 1 } },
-				lualine_x = {
-					{ "filetype" },
-				},
+				lualine_x = {},
 				lualine_y = {},
-				lualine_z = { "hostname" },
+				lualine_z = {},
 			},
 			inactive_sections = {},
 		})
